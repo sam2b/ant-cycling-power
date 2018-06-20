@@ -69,10 +69,10 @@ c. zwiftID = ""
 nano Zwifter.js
 ```
 
-    a. username = ""
-    b. password = ""
-    c. riderID = ""
-        1) Same as the zwiftID above.
+a. username = ""
+b. password = ""
+c. riderID = ""
+    1) Same as the zwiftID above.
 7) Type exit to return to the pi user.
 8) cd ant-cycling-power
 9) Finally, run it!!

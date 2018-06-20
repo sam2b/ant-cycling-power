@@ -88,15 +88,14 @@ function run() {
     setInterval(function() {
         power_instant = Math.round(speedmeter.getPower());
         cadence = Math.round(speedmeter.getSpeed());
-        if (isNaN(power_instant)) {
+        /*if (isNaN(power_instant)) {
             console.log("------------POWER NAN----------------"); // debugging, remove me.
         }
         if (isNaN(cadence)) {
             console.log("------------cadence NAN----------------"); // debugging, remove me.
-        }
+        }*/
         power_instant = isNaN(power_instant) ? 0 : power_instant;  //avoid NaN
         pm.broadcast(power_instant, cadence);
-        //autoMode = speedmeter.getAutoModeRequest();  // TODO, remove this line.
     }, 249);
     
     // Runs asynchronously to change the level. Most noticeable when suddenly encountering a steep grade, i.e. from 0% to 10%.

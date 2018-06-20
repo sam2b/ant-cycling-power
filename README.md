@@ -11,77 +11,94 @@ https://www.instructables.com/id/Using-Zwift-With-Nearly-Any-Fitness-Device/
 <instructions eta July 2018>
 
 ##SOFTWARE INSTALLATION
-	1) Plug in your Ant+ usb devices: one into your Raspberry Pi and one your computer running Zwift.
-	2) Do everything as root!  Otherwise, at your own risk of headache and horror.
-		```
-        sudo su -
-        ```
-	3) cd /home/pi
-	4) From your home directory, type the following:
-		```
-        apt-get update -y
-		apt-get upgrade -y
-		apt-get install npm git build-essential libudev-dev -y
-		npm install -g n
-		npm install -g jspm
-		n 6.0.0
-		npm install -g npm@6.0.0
-		npm install -g typings typescript
-		git clone --recursive https://github.com/sam2b/ant-cycling-power
-		git clone --recursive https://github.com/sam2b/ZwiftVirtualPower
-		cp ZwiftVirtualPower/SpeedMeter.js ant-cycling-power/
-		cp ZwiftVirtualPower/Zwifter.js ant-cycling-power/
-        ```
-	5) cd into folder ant-cycling-power
-        ```
-		npm install
-		cd node_modules/ant-plus
-		npm install
-		cd ../..
-		jspm install npm:ant-plus
-        ```
-		Accept all of the defaults by pressing enter at each prompt.
-        ```
-		cp -r jspm_packages/npm/ant-plus@0.0.19/build node_modules/ant-plus/
-        ```
-	6) Edit the following files:
-		```
-        nano Test.js
-        ```
-        a. zwiftUsername = ""
-		b. zwiftPassword = ""
-		c. zwiftID = ""
-            1) You can locate your six digit zwift id number by browsing your Documents folder.  i.e. C:\Users\<your user name>\Documents\Zwift\cp\
-            2) In here, a folder exists for each user that has logged into zwift.  Find yours, and note the six digit number.
-		```
-        nano Zwifter.js
-        ```
-        a. username = ""
-        b. password = ""
-        c. riderID = ""
-            1) Same as the zwiftID above.
-	7) Type exit to return to the pi user.
-	8) cd ant-cycling-power
-	9) Finally, run it!!
-        ```
-		sudo node test.js
-        ```
-	10) You should see:
+1) Plug in your Ant+ usb devices: one into your Raspberry Pi and one your computer running Zwift.
+2) Do everything as root!  Otherwise, at your own risk of headache and horror.
+
+```
+sudo su -
+```
+
+3) cd /home/pi
+
+4) From your home directory, type the following:
+
+```
+apt-get update -y
+apt-get upgrade -y
+apt-get install npm git build-essential libudev-dev -y
+npm install -g n
+npm install -g jspm
+n 6.0.0
+npm install -g npm@6.0.0
+npm install -g typings typescript
+git clone --recursive https://github.com/sam2b/ant-cycling-power
+git clone --recursive https://github.com/sam2b/ZwiftVirtualPower
+cp ZwiftVirtualPower/SpeedMeter.js ant-cycling-power/
+cp ZwiftVirtualPower/Zwifter.js ant-cycling-power/
+```
+
+5) cd into folder ant-cycling-power
+```
+npm install
+cd node_modules/ant-plus
+npm install
+cd ../..
+jspm install npm:ant-plus
+```
+
+Accept all of the defaults by pressing enter at each prompt.
+
+```
+cp -r jspm_packages/npm/ant-plus@0.0.19/build node_modules/ant-plus/
+```
+
+6) Edit the following files:
+
+```
+nano Test.js
+```
+
+    a. zwiftUsername = ""
+    b. zwiftPassword = ""
+    c. zwiftID = ""
+        1) You can locate your six digit zwift id number by browsing your Documents folder.  i.e. C:\Users\<your user name>\Documents\Zwift\cp\
+        2) In here, a folder exists for each user that has logged into zwift.  Find yours, and note the six digit number.
+
     ```
-	pi@raspberrypi:~/ant-cycling-power $ sudo node test.js
-	OK FOUND ANT+
-	startingLevel = 8
-	startingLevel = 8
-	     maxLevel = 20
-	     easyMode = false
-	     autoMode = true
-	startup
-	Max channels: 8
-	cycling power meter initialized
+    nano Zwifter.js
     ```
-	11) To quit:
-		a. Press ctrl-q
-		b. You should see:
-        ```
-		Closing stick now...
-        ```
+
+    a. username = ""
+    b. password = ""
+    c. riderID = ""
+        1) Same as the zwiftID above.
+7) Type exit to return to the pi user.
+8) cd ant-cycling-power
+9) Finally, run it!!
+
+    ```
+    sudo node test.js
+    ```
+
+10) You should see:
+
+    ```
+    pi@raspberrypi:~/ant-cycling-power $ sudo node test.js
+    OK FOUND ANT+
+    startingLevel = 8
+    startingLevel = 8
+         maxLevel = 20
+         easyMode = false
+         autoMode = true
+    startup
+    Max channels: 8
+    cycling power meter initialized
+    ```
+
+11) To quit:
+    a. Press ctrl-q
+    b. You should see:
+
+    ```
+    Closing stick now...
+    ```

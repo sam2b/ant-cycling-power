@@ -62,8 +62,8 @@ nano Test.js
 a. zwiftUsername = ""
 b. zwiftPassword = ""
 c. zwiftID = ""
-    1) You can locate your six digit zwift id number by browsing your Documents folder.  i.e. C:\Users\<your user name>\Documents\Zwift\cp\
-    2) In here, a folder exists for each user that has logged into zwift.  Find yours, and note the six digit number.
+1) You can locate your six digit zwift id number by browsing your Documents folder.  i.e. C:\Users\<your user name>\Documents\Zwift\cp\
+2) In here, a folder exists for each user that has logged into zwift.  Find yours, and note the six digit number.
 
 ```
 nano Zwifter.js

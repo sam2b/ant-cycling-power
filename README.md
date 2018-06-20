@@ -64,6 +64,7 @@ a. zwiftUsername = ""
 <BR>c. zwiftID = ""
 <BR>1) You can locate your six digit zwift id number by browsing your Documents folder.  i.e. C:\Users\<your user name>\Documents\Zwift\cp\
 <BR>2) In here, a folder exists for each user that has logged into zwift.  Find yours, and note the six digit number.
+<BR>3) Edit the pin numbers for the physical connections you made.
 
 ```
 nano Zwifter.js

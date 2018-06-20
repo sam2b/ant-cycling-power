@@ -60,19 +60,19 @@ nano Test.js
 ```
 
 a. zwiftUsername = ""
-b. zwiftPassword = ""
-c. zwiftID = ""
-1) You can locate your six digit zwift id number by browsing your Documents folder.  i.e. C:\Users\<your user name>\Documents\Zwift\cp\
-2) In here, a folder exists for each user that has logged into zwift.  Find yours, and note the six digit number.
+<BR>b. zwiftPassword = ""
+<BR>c. zwiftID = ""
+<BR>1) You can locate your six digit zwift id number by browsing your Documents folder.  i.e. C:\Users\<your user name>\Documents\Zwift\cp\
+<BR>2) In here, a folder exists for each user that has logged into zwift.  Find yours, and note the six digit number.
 
 ```
 nano Zwifter.js
 ```
 
 a. username = ""
-b. password = ""
-c. riderID = ""
-    1) Same as the zwiftID above.
+<BR>b. password = ""
+<BR>c. riderID = ""
+<BR>    1) Same as the zwiftID above.
 7) Type exit to return to the pi user.
 8) cd ant-cycling-power
 9) Finally, run it!!

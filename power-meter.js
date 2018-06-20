@@ -1,4 +1,4 @@
-var Ant = require('./ant-plus');
+var Ant = require('ant-plus');
 var stick;
 
 var PowerMeter = function() {

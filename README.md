@@ -5,7 +5,7 @@ It only broadcasts instant power and cadence, with no torque or pedal
 measurements.
 
 Augmented & extended document written by AndreasO1 
-https://www.instructables.com/id/Using-Zwift-With-Nearly-Any-Fitness-Device/
+<BR>https://www.instructables.com/id/Using-Zwift-With-Nearly-Any-Fitness-Device/
 
 ##HARDWARE INSTALLATION
 <instructions eta July 2018>
@@ -38,6 +38,7 @@ cp ZwiftVirtualPower/Zwifter.js ant-cycling-power/
 ```
 
 5) cd into folder ant-cycling-power
+
 ```
 npm install
 cd node_modules/ant-plus
@@ -64,9 +65,9 @@ nano Test.js
         1) You can locate your six digit zwift id number by browsing your Documents folder.  i.e. C:\Users\<your user name>\Documents\Zwift\cp\
         2) In here, a folder exists for each user that has logged into zwift.  Find yours, and note the six digit number.
 
-    ```
-    nano Zwifter.js
-    ```
+```
+nano Zwifter.js
+```
 
     a. username = ""
     b. password = ""
@@ -76,29 +77,29 @@ nano Test.js
 8) cd ant-cycling-power
 9) Finally, run it!!
 
-    ```
-    sudo node test.js
-    ```
+```
+sudo node test.js
+```
 
 10) You should see:
 
-    ```
-    pi@raspberrypi:~/ant-cycling-power $ sudo node test.js
-    OK FOUND ANT+
-    startingLevel = 8
-    startingLevel = 8
-         maxLevel = 20
-         easyMode = false
-         autoMode = true
-    startup
-    Max channels: 8
-    cycling power meter initialized
-    ```
+```
+pi@raspberrypi:~/ant-cycling-power $ sudo node test.js
+OK FOUND ANT+
+startingLevel = 8
+startingLevel = 8
+     maxLevel = 20
+     easyMode = false
+     autoMode = true
+startup
+Max channels: 8
+cycling power meter initialized
+```
 
 11) To quit:
     a. Press ctrl-q
     b. You should see:
 
-    ```
-    Closing stick now...
-    ```
+```
+Closing stick now...
+```

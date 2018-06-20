@@ -59,11 +59,11 @@ cp -r jspm_packages/npm/ant-plus@0.0.19/build node_modules/ant-plus/
 nano Test.js
 ```
 
-    a. zwiftUsername = ""
-    b. zwiftPassword = ""
-    c. zwiftID = ""
-        1) You can locate your six digit zwift id number by browsing your Documents folder.  i.e. C:\Users\<your user name>\Documents\Zwift\cp\
-        2) In here, a folder exists for each user that has logged into zwift.  Find yours, and note the six digit number.
+a. zwiftUsername = ""
+b. zwiftPassword = ""
+c. zwiftID = ""
+    1) You can locate your six digit zwift id number by browsing your Documents folder.  i.e. C:\Users\<your user name>\Documents\Zwift\cp\
+    2) In here, a folder exists for each user that has logged into zwift.  Find yours, and note the six digit number.
 
 ```
 nano Zwifter.js

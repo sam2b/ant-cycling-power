@@ -97,8 +97,8 @@ cycling power meter initialized
 ```
 
 11) To quit:
-    a. Press ctrl-q
-    b. You should see:
+<BR>    a. Press ctrl-q
+<BR>    b. You should see:
 
 ```
 Closing stick now...

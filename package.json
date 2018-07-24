@@ -32,4 +32,13 @@
     "system-sleep": "^1.3.6",
     "zwift-mobile-api": "^0.3.7"
   }
+  "jspm": {
+    "dependencies": {
+      "ant-plus": "npm:ant-plus@^0.0.19"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
 }

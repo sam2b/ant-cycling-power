@@ -6,6 +6,7 @@ var buttonAutoModePin = 32;
 var resistanceUpPin = 5; // GPIO5 resistance up.
 var resistanceDownPin = 6; // GPIO6 resistance down.
 var startingLevel = 9; // If too easy, increase this value.  Else, decrease.
+var adjustedLevel = startingLevel;
 // -------------- Do not edit below this line --------------
 
 var keypress = require('keypress');
@@ -31,7 +32,6 @@ function initialize() {
             case 'q': // ctrl-q
             case 'Q':
                 if (key && key.ctrl && (key.name == 'q' || key.name == 'Q')) {
-                    //process.stdin.pause();
                     pm.close(); // closes the stick.
                     process.exit(0);
                 }
@@ -40,16 +40,16 @@ function initialize() {
             case 'E':
                 if (easyMode) {
                     easyMode = false;
-                    startingLevel += 2; // Restore to original starting level value.
+                    adjustedLevel = startingLevel; // Restore to original starting level value.
                     console.log("Easy mode OFF.");
                 } else {
                     easyMode = true;
-                    startingLevel -= 2; // Advantange by two levels less.
+                    adjustedLevel -= 2; // Advantage by two levels less.
                     console.log("Easy mode ON.");
                 }
                 z.setEasyMode(easyMode);
-                z.setLevelAtZeroPercentGrade(startingLevel);
-                console.log("startingLevel = " + z.getLevelAtZeroPercentGrade());
+                z.setLevelAtZeroPercentGrade(adjustedLevel);
+                console.log("adjustedLevel = " + z.getLevelAtZeroPercentGrade());
                 break;
             case 'space':
                 if (autoMode) {
@@ -57,6 +57,7 @@ function initialize() {
                     console.log("Auto mode OFF."); // Manual control of the resistance.
                 } else {
                     autoMode = true;
+                    adjustedLevel = startingLevel; // reset to default starting level.
                     console.log("Auto mode ON."); // Automatic control of the resistance.
                 }
                 speedmeter.setAutoMode(autoMode);
@@ -67,9 +68,9 @@ function initialize() {
     process.stdin.setRawMode(true);
     process.stdin.resume();
     z.setMaxLevel(speedmeter.getMaxLevel());
-    z.setLevelAtZeroPercentGrade(startingLevel);
-    console.log("startingLevel = " + startingLevel);
-    console.log("startingLevel = " + z.getLevelAtZeroPercentGrade());
+    z.setLevelAtZeroPercentGrade(adjustedLevel);
+    console.log("adjustedLevel = " + adjustedLevel);
+    console.log("adjustedLevel = " + z.getLevelAtZeroPercentGrade());
     console.log("     maxLevel = " + speedmeter.getMaxLevel());
     console.log("     easyMode = " + easyMode);
     console.log("     autoMode = " + autoMode);
@@ -159,3 +160,4 @@ function setResistance(requestedLevel, currentLevel) {
 
 initialize();
 run();
+

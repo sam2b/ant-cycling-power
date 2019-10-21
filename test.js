@@ -2,10 +2,10 @@
 var sensorPin = 33; // Pin for cadence sensor.
 var buttonUpPin = 35; // Pin button up.
 var buttonDownPin = 37; // Pin button down.
-var buttonAutoModePin = 32;
-var resistanceUpPin = 5; // GPIO5 resistance up.
-var resistanceDownPin = 6; // GPIO6 resistance down.
-var startingLevel = 9; // If too easy, increase this value.  Else, decrease.
+var buttonAutoModePin = 32; // NOT CURRENTLY USED.
+var resistanceUpPin = 22; // GPIO22 resistance up.
+var resistanceDownPin = 27; // GPIO27 resistance down.
+var startingLevel = 9; // Physical resistance of your elliptical machine. If too easy, increase this value.  Else, decrease.
 var adjustedLevel = startingLevel;
 // -------------- Do not edit below this line --------------
 

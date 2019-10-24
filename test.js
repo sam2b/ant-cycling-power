@@ -19,6 +19,7 @@ var z = new Zwifter.Zwifter();
 var autoMode = true;
 var easyMode = false;
 var counter = 0;
+var isWatopia = false;
 z.start();
 
 function initialize() {
@@ -50,6 +51,18 @@ function initialize() {
                 z.setEasyMode(easyMode);
                 z.setLevelAtZeroPercentGrade(adjustedLevel);
                 console.log("adjustedLevel = " + z.getLevelAtZeroPercentGrade());
+                break;
+            case 'w':
+            case 'W':
+                if (isWatopia) {
+                    z.setMultiplier(100);
+                    isWatopia = false;
+                    console.log("Now using the map from this month's schedule.");
+                } else {
+                    z.setMultiplier(50);
+                    isWatopia = true;
+                    console.log("Watopia map selected manually.");
+                }
                 break;
             case 'space':
                 if (autoMode) {
